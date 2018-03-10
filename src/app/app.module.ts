@@ -1,16 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
+import {RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
+const appRoutes:Routes = [
+  {
+    path: 'rofl',
+    component: NavbarComponent,
+  },
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes, {useHash:true}),
   ],
   providers: [],
   bootstrap: [AppComponent]
