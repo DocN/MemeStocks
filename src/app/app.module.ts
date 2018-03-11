@@ -10,6 +10,11 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
 
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
+
+
 
 const appRoutes:Routes = [
   {
@@ -29,6 +34,7 @@ const appRoutes:Routes = [
     MainpageComponent
   ],
   imports: [
+    MDBBootstrapModule.forRoot(),
     BrowserModule,
     NgxCarouselModule,
     RouterModule.forRoot(appRoutes, {useHash:true}),

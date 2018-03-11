@@ -78,3 +78,22 @@
     border-radius: 999px;
     right: 0;
 }
+
+
+.navbar-default {
+	background-color: #3498db;
+	border-color: transparent;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+    font-weight:1000;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;
+}
+
+.nav-item {
+    padding-right:20px;
+}
