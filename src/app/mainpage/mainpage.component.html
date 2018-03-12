@@ -1,18 +1,22 @@
 <div class="container">
-  <ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad()">
-      <ngx-tile NgxCarouselItem *ngFor="let tile of carouselTileItems; let i = index;">
-          <div class="tile" [style.background]="'url(' + tile + ')'">
-              <h1>{{i}}</h1>
-          </div>
-      </ngx-tile>
-      <button NgxCarouselPrev class="leftRs">&lt;</button>
-      <button NgxCarouselNext class="rightRs">&gt;</button>
-  </ngx-carousel>
+    <ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad()">
+        <ngx-tile NgxCarouselItem *ngFor="let tile of carouselTileItems; let i = index;">
+            <div class="containerslide">
+                <div class="tile">
+                <fusioncharts
+                    [width]="width"
+                    [height]="height"
+                    [type]="type"
+                    [dataFormat]="dataFormat"
+                    [dataSource]="dataSource">
+                </fusioncharts>
+                </div>
+            </div>
+        </ngx-tile>
+        <button NgxCarouselPrev class="leftRs">&lt;</button>
+        <button NgxCarouselNext class="rightRs">&gt;</button>
+    </ngx-carousel>
 </div>
-
-
-
-
 
 
 
