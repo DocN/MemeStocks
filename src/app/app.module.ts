@@ -17,6 +17,12 @@ import * as FusionCharts from 'fusioncharts';
 import * as Charts from 'fusioncharts/fusioncharts.charts';
 import * as FintTheme from 'fusioncharts/themes/fusioncharts.theme.fint';
 import { FusionChartsModule } from 'angular4-fusioncharts';
+import { LoginPortalComponent } from './login-portal/login-portal.component';
+import { LoginframeComponent } from './loginmodules/loginframe/loginframe.component';
+
+import { FormsModule }   from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
 
@@ -28,6 +34,10 @@ const appRoutes:Routes = [
   {
     path: 'navbartest',
     component: NavbarComponent,
+  },
+  {
+    path: 'login',
+    component: LoginPortalComponent,
   }
 ]
 
@@ -35,7 +45,9 @@ const appRoutes:Routes = [
   declarations: [
     AppComponent,
     NavbarComponent,
-    MainpageComponent
+    MainpageComponent,
+    LoginPortalComponent,
+    LoginframeComponent,
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
@@ -43,6 +55,9 @@ const appRoutes:Routes = [
     NgxCarouselModule,
     RouterModule.forRoot(appRoutes, {useHash:true}),
     FusionChartsModule,
+    FormsModule,
+    HttpClientModule,
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

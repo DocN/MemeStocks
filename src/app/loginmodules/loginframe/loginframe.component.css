@@ -1,0 +1,23 @@
+.bodyContainer {
+    min-height: calc(100vh - 76px);
+    background-color:#3498db;
+    background-size:cover;
+}
+.loginframe {
+    padding:20px;
+    margin-top:50px;
+    height:500px;
+    width:500px;
+    background-color:white;
+    border-radius: 10px;
+}
+
+.thethings {
+    height:50px;
+    width:50px;
+}
+
+.warningMessage {
+    text-align:center;
+    color:red;
+}
