@@ -20,12 +20,16 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav ml-auto">
-                <img class ="avatarImg" src="assets/img/avatar.png">
+                <div *ngIf="logcheck == 1; then logout else login"></div>
+                <ng-template #logout>
+                <img class ="avatarImg" src="{{avatarurl}}">
                 <div class="myAccountText">
-                       Welcome DrN
-                <br>
-                       Balance: Ք1000 
+                    Welcome {{ username }}
+                     <br>
+                    Balance: Ք {{balance}}
                 </div>
+                </ng-template>
+                <ng-template #login><a class="alreadymemer" routerLink="/login">Already a Memer?</a></ng-template>
             </ul>
         </div>
     </div>

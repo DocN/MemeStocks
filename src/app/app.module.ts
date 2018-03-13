@@ -24,6 +24,10 @@ import { FormsModule }   from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
+//session data
+import { SessionsService } from './sessions.service';
+import { LogoutframeComponent } from './loginmodules/logoutframe/logoutframe.component';
+
 FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
 
 const appRoutes:Routes = [
@@ -38,6 +42,10 @@ const appRoutes:Routes = [
   {
     path: 'login',
     component: LoginPortalComponent,
+  },
+  {
+    path:'logout',
+    component: LogoutframeComponent,
   }
 ]
 
@@ -48,6 +56,7 @@ const appRoutes:Routes = [
     MainpageComponent,
     LoginPortalComponent,
     LoginframeComponent,
+    LogoutframeComponent,
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
@@ -59,7 +68,9 @@ const appRoutes:Routes = [
     HttpClientModule,
     HttpModule,
   ],
-  providers: [],
+  providers: [
+    SessionsService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

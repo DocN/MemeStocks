@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import * as crypto from 'crypto-js';
+import { SessionsService } from '../../sessions.service';
 
 @Component({
   selector: 'app-loginframe',
@@ -18,7 +19,7 @@ export class LoginframeComponent implements OnInit {
   private password;
   warningMessage = '';
 
-  constructor(private router:Router, private http: HttpClient) { }
+  constructor(private router:Router, private http: HttpClient, private session:SessionsService) { }
 
   ngOnInit() {
   }
@@ -27,10 +28,12 @@ export class LoginframeComponent implements OnInit {
     console.log("init login");
     var username = this.model.username;
     var password = this.model.password;
+
     //encrypt password with SHA1
     var encryptionKey = crypto.SHA1(password);
-    console.log(encryptionKey.toString());
 
+    console.log(encryptionKey.toString());
+    //store data for transport
     let data = {'epassword': encryptionKey.toString(), 'userName': username, 'userId': 1};
     this.http.post('http://127.0.0.1/meme/login.php', data)
       .subscribe(
@@ -45,9 +48,9 @@ export class LoginframeComponent implements OnInit {
               //this.spinnerService.hide();
               return;
             }
-            //store session data
-            //this.session.loginSession(res);
             console.log(res);
+            //store session data
+            this.session.loginSession(res);
             var element = document.getElementById("warning");
             element.style.color = "green";
             //finish loading release load spinner
