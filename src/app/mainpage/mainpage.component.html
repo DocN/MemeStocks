@@ -1,23 +1,58 @@
-<div class="container">
-    <ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad()">
-        <ngx-tile NgxCarouselItem *ngFor="let tile of carouselTileItems; let i = index;">
-            <div class="containerslide">
-                <div class="tile">
-                <fusioncharts
-                    [width]="width"
-                    [height]="height"
-                    [type]="type"
-                    [dataFormat]="dataFormat"
-                    [dataSource]="dataSource">
-                </fusioncharts>
-                </div>
+<div class="mainBackground">
+    <div class="container">
+        <div class="card stockcara">
+            <div class="stockcaraheader">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4">
+                            </div>
+                            <div class="col-4">
+                                <div class="container stockcaraTitleCont">
+                                    <div class="row">
+                                        <img class="stockcaraspice" src="assets/img/memes/spicymemeee.jpg">
+                                        <h4 class="stockcaraTitle">Spiciest Memes</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+    
+                            </div>
+                        </div>
+                    </div>
+                    <hr> 
             </div>
-        </ngx-tile>
-        <button NgxCarouselPrev class="leftRs">&lt;</button>
-        <button NgxCarouselNext class="rightRs">&gt;</button>
-    </ngx-carousel>
-</div>
+    
+            <ngx-carousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad()">
+                <ngx-tile NgxCarouselItem *ngFor="let tile of carouselTileItems; let i = index;">
+                    <div class="containerslide">
+                        <div class="tile">
+                        <fusioncharts
+                            [width]="width"
+                            [height]="height"
+                            [type]="type"
+                            [dataFormat]="dataFormat"
+                            [dataSource]="dataSource">
+                        </fusioncharts>
+                        </div>
+                    </div>
+                </ngx-tile>
+                <button NgxCarouselPrev class="leftRs">&lt;</button>
+                <button NgxCarouselNext class="rightRs">&gt;</button>
+            </ngx-carousel>
+        </div>
+    </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                
+            </div>
+            <div class="col-4">
+                <app-pepeblock></app-pepeblock>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

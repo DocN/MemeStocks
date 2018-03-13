@@ -105,3 +105,36 @@ nav h1 {
 .containerslide {
     height:150px;
 }
+
+.stockcara {
+
+}
+
+.stockcaraTitle {
+    color:white;
+    font-family: Arial, Helvetica, sans-serif, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+
+}
+
+.stockcaraheader {
+    background-color:#337ab7;
+}
+
+.stockcaraspice {
+    height:50px;
+    width:50px;
+}
+
+.stockcaraTitleCont {
+    padding-top:20px;
+}
+
+.mainBackground {
+    padding-top:40px;
+    height:100vh;
+    background: lightblue url("../../assets/img/background.png") no-repeat fixed center; 
+}
+
+.spacing{
+    margin-top:20px;
+}

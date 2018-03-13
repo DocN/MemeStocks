@@ -1,0 +1,23 @@
+.pepetitle {
+    color:white;
+    background-color: #337ab7;
+}
+
+.cardspecs {
+    margin-top:20px;
+}
+
+.pepeicons {
+    height:40px;
+    width:40px;
+}
+
+.titlesText {
+    font-weight:bold;
+    font-size:12px;
+}
+
+.priceText {
+    padding-top:10px;
+    font-size:12px;
+}

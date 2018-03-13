@@ -27,6 +27,7 @@ import { HttpModule } from '@angular/http';
 //session data
 import { SessionsService } from './sessions.service';
 import { LogoutframeComponent } from './loginmodules/logoutframe/logoutframe.component';
+import { PepeblockComponent } from './blocks/pepeblock/pepeblock.component';
 
 FusionChartsModule.fcRoot(FusionCharts, Charts, FintTheme);
 
@@ -57,6 +58,7 @@ const appRoutes:Routes = [
     LoginPortalComponent,
     LoginframeComponent,
     LogoutframeComponent,
+    PepeblockComponent,
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
